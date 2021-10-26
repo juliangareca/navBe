@@ -1,0 +1,45 @@
+body {
+    .main {
+        background: url(../media/cohete-background.jpg);
+        @include backgrounds;
+        top: 150px;
+        z-index: -1;
+
+        .mainContainer {
+            position: absolute;
+            width: 750px;
+            height: 610px;
+            right: 13.4%;
+            top: 170px;
+            display: flex;
+            flex-flow: column nowrap;
+            .coheteAlone {
+                display: none;
+            }
+            .h1Container {
+                margin: 0 0 50px 0;
+                h1 {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 72px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 85px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: $violeta;
+                }
+            }
+            p {
+                @include parrafo24px(bold, 24px, 30px);
+                width: 665px;
+                color: $violeta;
+            }
+            .descargaBtn {
+                @include descargaButton;
+                @include  parrafo24px(bold, 24px, 30px);
+                margin: 95px 19% 0 0;
+                align-self: center;
+            }
+        }
+    }
+}
